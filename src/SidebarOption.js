@@ -39,12 +39,12 @@ function SidebarOption({ Icon, title, id, addChanelOption }) {
   };
   return (
     <div
-      className="sidebarOption sidebarComponent"
+      className="sidebarOption"
       onClick={addChanelOption ? addChanel : selectChanel}
     >
       {Icon && <Icon className="sidebarOption__icon" />}
       {Icon ? (
-        <h3>{title}</h3>
+        <h3 className="sidebarComponent">{title}</h3>
       ) : (
         <h3 className="sidebarOption__chanel sidebarComponent">
           <span className="sidebarOption__hash">#</span> {title}
