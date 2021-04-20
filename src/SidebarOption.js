@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import "./SidebarOption.css";
 import { useHistory } from "react-router-dom";
 import db from "./firebase";
@@ -6,8 +6,7 @@ import db from "./firebase";
 function SidebarOption({ Icon, title, id, addChanelOption }) {
   const history = useHistory();
   
-
-window.onload = () => {
+useEffect(() => {
 let sidebarComponents = document.getElementsByClassName("sidebarComponent");
   for (let i = 0; i < sidebarComponents.length; i++) {
     sidebarComponents[i].addEventListener("click", function () {
@@ -21,8 +20,8 @@ let sidebarComponents = document.getElementsByClassName("sidebarComponent");
       }
       this.className += " activeComponent";
     });
-  }
-}
+  }, [db.collection("rooms")]);
+
   const selectChanel = () => {
     if (id) {
       history.push(`/room/${id}`);
