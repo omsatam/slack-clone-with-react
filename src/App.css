@@ -1,6 +1,6 @@
 body {
   --slack-color: #3f0f40;
-  overflow-y: scroll;
+  overflow: hidden;
 }
 .app__body {
   display: flex;
