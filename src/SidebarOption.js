@@ -5,8 +5,10 @@ import db from "./firebase";
 
 function SidebarOption({ Icon, title, id, addChanelOption }) {
   const history = useHistory();
-  let sidebarComponents = document.getElementsByClassName("sidebarComponent");
+  
 
+window.onload = () => {
+let sidebarComponents = document.getElementsByClassName("sidebarComponent");
   for (let i = 0; i < sidebarComponents.length; i++) {
     sidebarComponents[i].addEventListener("click", function () {
       var current = document.getElementsByClassName("activeComponent");
@@ -20,7 +22,7 @@ function SidebarOption({ Icon, title, id, addChanelOption }) {
       this.className += " activeComponent";
     });
   }
-
+}
   const selectChanel = () => {
     if (id) {
       history.push(`/room/${id}`);
