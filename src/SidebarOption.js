@@ -20,6 +20,7 @@ let sidebarComponents = document.getElementsByClassName("sidebarComponent");
       }
       this.className += " activeComponent";
     });
+    }
   }, [db.collection("rooms")]);
 
   const selectChanel = () => {
