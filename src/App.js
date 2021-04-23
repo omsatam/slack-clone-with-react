@@ -20,14 +20,17 @@ function App() {
             <Header />
             <div className="app__body">
               <Sidebar />
-
+               
               <Switch>
-                <Route exact path="/room/:roomId">
+               <Route path="/">
+
+                  <h1>welcome</h1>
+
+                </Route>
+                <Route path="/room/:roomId">
                   <Chat />
                 </Route>
-                <Route exact path="/">
-                  <h1>welcome</h1>
-                </Route>
+                
               </Switch>
               {/* Sidebar */}
               {/* React router */}
