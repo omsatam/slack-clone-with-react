@@ -8,12 +8,12 @@ import Chat from "./Chat";
 import Login from "./Login";
 
 function App() {
-  const [state, { user }] = useStateValue();
+  const [{ user }, dispatch] = useStateValue();
 
   return (
     <div className="App">
-       <Router>
-        { !user ? (
+      <Router>
+        {!user ? (
           <Login />
         ) : (
           <>
