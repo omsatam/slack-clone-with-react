@@ -22,15 +22,22 @@ function App() {
               <Sidebar />
                
               <Switch>
-               <Route exact path="/">
+              
 
-                  <h1>welcome</h1>
+    
 
-                </Route>
+
                 <Route exact path="/room/:roomId">
                   <Chat />
                 </Route>
-                
+    
+    
+                <Route exact path = "/">
+
+
+               <h1>welcome</h1>
+
+                </Route>
               </Switch>
               {/* Sidebar */}
               {/* React router */}
