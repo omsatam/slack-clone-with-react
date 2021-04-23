@@ -22,12 +22,12 @@ function App() {
               <Sidebar />
                
               <Switch>
-               <Route path="/">
+               <Route exact path="/">
 
                   <h1>welcome</h1>
 
                 </Route>
-                <Route path="/room/:roomId">
+                <Route exact path="/room/:roomId">
                   <Chat />
                 </Route>
                 
