@@ -8,35 +8,25 @@ import Chat from "./Chat";
 import Login from "./Login";
 
 function App() {
-  const [{ user }, dispatch] = useStateValue();
+  const [state, { user }] = useStateValue();
 
   return (
     <div className="App">
-      <Router>
-        {!user ? (
+       <Router>
+        { !user ? (
           <Login />
         ) : (
           <>
             <Header />
             <div className="app__body">
               <Sidebar />
-               
+
               <Switch>
-              
-
-    
-
-
                 <Route exact path="/room/:roomId">
                   <Chat />
                 </Route>
-    
-    
-                <Route exact path = "/">
-
-
-               <h1>welcome</h1>
-
+                <Route exact path="/">
+                  <h1>welcome</h1>
                 </Route>
               </Switch>
               {/* Sidebar */}
