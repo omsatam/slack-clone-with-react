@@ -18,6 +18,7 @@ function ChatInput({ chanelName, chanelId }) {
         user: user.displayName,
         userImage: user.photoURL,
       });
+      setInput("");
     }
   };
   return (
