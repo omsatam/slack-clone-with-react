@@ -33,6 +33,7 @@
   text-align: center;
   min-width: 35vw;
   outline: none;
+  color: gray;
 }
 .header__right {
   flex: 0.3;
